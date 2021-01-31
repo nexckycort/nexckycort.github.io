@@ -1,0 +1,35 @@
+body {
+  font: 16px/1.6 Source Sans Pro, serif;
+  background: black;
+  color: white;
+  
+}
+body,
+html{
+  height: 100vh;
+}
+.card {
+  background-color: #141414;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  background-color: #141414;
+  background-size: cover;
+  border-radius: 6px;
+}
+
+.card {
+  transition: transform 200ms;
+}
+.card:hover{
+  transform: scale(1.1);
+}
+.nav i{
+  margin-right: .5em;
+  font-size: .75em;
+}
+.nav li{
+  list-style-type: none;
+}
