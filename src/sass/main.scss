@@ -1,7 +1,7 @@
 body {
   font: 16px/1.6 Source Sans Pro, serif;
   background: black;
-  color: white;
+  color: #a6a3a3;
   
 }
 body,
@@ -13,8 +13,8 @@ html{
 }
 
 .profile-picture {
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
   background-color: #141414;
   background-size: cover;
   border-radius: 6px;
@@ -32,4 +32,17 @@ html{
 }
 .nav li{
   list-style-type: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a h5 {
+  font-weight: bold;
+}
+a p {
+  color:#a6a3a3;
+}
+.site-title {
+  color: white;
 }
