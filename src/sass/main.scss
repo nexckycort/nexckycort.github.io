@@ -12,9 +12,14 @@ html{
   background-color: #141414;
 }
 
+@media (min-width: 768px) {
+  .profile-picture {
+    width: 50%;
+    height: 50%;
+  }
+}
+
 .profile-picture {
-  width: 50%;
-  height: 50%;
   background-color: #141414;
   background-size: cover;
   border-radius: 6px;
@@ -43,6 +48,13 @@ a h5 {
 a p {
   color:#a6a3a3;
 }
+a:hover {
+  color: teal;
+}
 .site-title {
   color: white;
+}
+.fa-github {
+  color: white;
+  width: 20px;
 }
