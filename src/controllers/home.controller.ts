@@ -4,29 +4,30 @@ import homeService from '../services/home.service'
 export default async () => {
   const repos = await homeService.repos()
 
-  const reposHTML = repos
-    .map((repo: any) => {
-      const { url, name, description } = repo
-      return /* html */ `<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3">
-            <a href="${url}" target="_blank">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">${name}</h5>
-                  <p class="card-text">${description}</p>
-                </div>
-              </div>
-            </a>
-          </div>`
-    })
-    .join('')
-
   const divElement = document.createElement('div')
   divElement.classList.add('row')
-
   divElement.insertAdjacentHTML('afterbegin', home)
 
   const reposElement = divElement.querySelector('#repos')
-  if (reposElement !== null) reposElement.insertAdjacentHTML('afterbegin', reposHTML)
+
+  if (reposElement !== null) {
+    repos.forEach((repo: any) => {
+      const { url, name, description } = repo
+
+      const card = /* html */`<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3">
+        <a href="${url}" target="_blank">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">${name}</h5>
+              <p class="card-text">${description}</p>
+            </div>
+          </div>
+        </a>
+      </div>`
+
+      reposElement.insertAdjacentHTML('beforeend', card)
+    })
+  }
 
   return divElement
 }
