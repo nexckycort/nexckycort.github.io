@@ -4,6 +4,7 @@ import './sass/main.scss'
 const init = async (): Promise<void> => {
   const content = document.getElementById('root')
   if (content !== null) {
+    content.classList.add('container')
     content.appendChild(await pages.home())
   }
 }
