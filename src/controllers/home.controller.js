@@ -4,7 +4,7 @@ import homeService from '../services/home.service'
 export default async () => {
   const repos = await homeService.repos()
 
-  const data = repos
+  const reposHTML = repos
     .map((repo) => {
       const { url, name, description } = repo
       return /* html */`<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3">
@@ -22,10 +22,10 @@ export default async () => {
   const divElement = document.createElement('div')
   divElement.classList.add('row')
 
-  divElement.innerHTML = home
+  divElement.insertAdjacentHTML('afterbegin', home)
 
   const reposElement = divElement.querySelector('#repos')
-  reposElement.innerHTML = data
+  reposElement.insertAdjacentHTML('afterbegin', reposHTML)
 
   return divElement
 }
