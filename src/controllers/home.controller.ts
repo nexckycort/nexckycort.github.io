@@ -1,7 +1,7 @@
 import home from '../pages/home.html'
 import homeService from '../services/home.service'
 
-export default async () => {
+export default async (): Promise<HTMLDivElement> => {
   const repos = await homeService.repos()
 
   const divElement = document.createElement('div')
@@ -14,7 +14,7 @@ export default async () => {
     repos.forEach((repo: any) => {
       const { url, name, description } = repo
 
-      const card = /* html */`<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3">
+      const card = /* html */ `<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3">
         <a href="${url}" target="_blank">
           <div class="card">
             <div class="card-body">

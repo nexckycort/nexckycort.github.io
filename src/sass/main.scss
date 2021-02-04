@@ -2,10 +2,9 @@ body {
   font: 16px/1.6 'Nunito Sans', sans-serif;
   background: black;
   color: #a6a3a3;
-  
 }
 body,
-html{
+html {
   height: 100vh;
 }
 .card {
@@ -28,14 +27,14 @@ html{
 .card {
   transition: transform 200ms;
 }
-.card:hover{
+.card:hover {
   transform: scale(1.1);
 }
-.nav i{
-  margin-right: .5em;
-  font-size: .75em;
+.nav i {
+  margin-right: 0.5em;
+  font-size: 0.75em;
 }
-.nav li{
+.nav li {
   list-style-type: none;
 }
 a {
@@ -46,7 +45,7 @@ a h5 {
   font-weight: bold;
 }
 a p {
-  color:#a6a3a3;
+  color: #a6a3a3;
 }
 a:hover {
   color: teal;
