@@ -1,17 +1,17 @@
-import * as homeModel from '../models/home.model'
+import homeModel from '../models/home.model'
 
 export default {
-  repos: async () => {
-    const data = await homeModel.repos()
+  getRepositories: async () => {
+    const data = await homeModel.getRepositories()
 
     const result = data
-      .filter((repo: any) => repo.description !== null && repo.description.includes('🛡️'))
-      .sort((a: any, b: any) => b.description.length - a.description.length)
-      .map((repo: any) => {
+      .filter((repo) => repo.description?.includes('🛡️'))
+      .sort((a, b) => b.description.length - a.description.length)
+      .map((repo) => {
         const { html_url: url } = repo
         const name = repo.name
           .split('-')
-          .map((part: any) => part[0].toUpperCase() + part.slice(1))
+          .map((part) => part[0].toUpperCase() + part.slice(1))
           .join(' ')
         const description = repo.description.slice(0, -3)
         return {

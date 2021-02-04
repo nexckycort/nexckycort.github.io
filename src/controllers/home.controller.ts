@@ -2,7 +2,7 @@ import home from '../pages/home.html'
 import homeService from '../services/home.service'
 
 export default async (): Promise<HTMLDivElement> => {
-  const repos = await homeService.repos()
+  const repos = await homeService.getRepositories()
 
   const divElement = document.createElement('div')
   divElement.classList.add('row')
@@ -11,7 +11,7 @@ export default async (): Promise<HTMLDivElement> => {
   const reposElement = divElement.querySelector('#repos')
 
   if (reposElement !== null) {
-    repos.forEach((repo: any) => {
+    repos.forEach((repo) => {
       const { url, name, description } = repo
 
       const card = /* html */ `<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3">
