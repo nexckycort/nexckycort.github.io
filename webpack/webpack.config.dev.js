@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/main.js",
+  entry: path.join(__dirname, "../src/main.ts"),
   mode: 'development',
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -13,6 +13,9 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
+  },
   module: {
     rules: [
       {
@@ -34,6 +37,11 @@ module.exports = {
         test: /\.html$/i,
         loader: "html-loader",
       },
+      {
+        test: /\.ts$/,
+        include: /src/,
+        use: [{ loader: 'ts-loader' }]
+      }
     ],
   },
   devtool: "eval-source-map",
