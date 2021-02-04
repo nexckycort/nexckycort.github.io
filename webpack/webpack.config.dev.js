@@ -1,16 +1,16 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: path.join(__dirname, "../src/main.ts"),
+  entry: path.join(__dirname, '../src/main.ts'),
   mode: 'development',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: './src/index.html',
     }),
   ],
   resolve: {
@@ -20,22 +20,22 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          'style-loader',
           // Translates CSS into CommonJS
-          "css-loader",
+          'css-loader',
           // Compiles Sass to CSS
-          "sass-loader",
-        ],
+          'sass-loader'
+        ]
       },
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: 'html-loader'
       },
       {
         test: /\.ts$/,
@@ -44,5 +44,5 @@ module.exports = {
       }
     ],
   },
-  devtool: "eval-source-map",
-};
+  devtool: 'eval-source-map'
+}
