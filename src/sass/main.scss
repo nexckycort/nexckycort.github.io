@@ -1,5 +1,5 @@
 body {
-  font: 16px/1.6 Source Sans Pro, serif;
+  font: 16px/1.6 'Nunito Sans', sans-serif;
   background: black;
   color: #a6a3a3;
   
@@ -57,4 +57,7 @@ a:hover {
 .fa-github {
   color: white;
   width: 20px;
+}
+.site-title {
+  font-weight: 600;
 }
