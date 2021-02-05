@@ -1,42 +1,8 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/utilities";
+@import 'layout';
+@import './profile/profile';
 
-// Layout & components
-@import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/images";
-@import "../../node_modules/bootstrap/scss/containers";
-@import "../../node_modules/bootstrap/scss/grid";
-@import "../../node_modules/bootstrap/scss/card";
-
-// Utilities
-@import "../../node_modules/bootstrap/scss/utilities/api";
-
-body {
-  font: 16px/1.6 'Nunito Sans', sans-serif;
-  background: black;
-  color: #a6a3a3;
-}
-body,
-html {
-  height: 100vh;
-}
 .card {
   background-color: #141414;
-}
-
-@media (min-width: 768px) {
-  .profile-picture {
-    width: 50%;
-    height: 50%;
-  }
-}
-
-.profile-picture {
-  background-color: #141414;
-  background-size: cover;
-  border-radius: 6px;
 }
 
 .card {
@@ -45,32 +11,9 @@ html {
 .card:hover {
   transform: scale(1.1);
 }
-.nav i {
-  margin-right: 0.5em;
-  font-size: 0.75em;
-}
-.nav li {
-  list-style-type: none;
-}
-a {
-  color: white;
-  text-decoration: none;
-}
-a h5 {
-  font-weight: bold;
-}
-a p {
-  color: #a6a3a3;
-}
-a:hover {
-  color: teal;
-}
+
 .site-title {
   color: white;
-}
-.fa-github {
-  color: white;
-  width: 20px;
 }
 .site-title {
   font-weight: 600;
