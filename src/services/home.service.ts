@@ -9,6 +9,8 @@ export default {
       .sort((a, b) => b.description.length - a.description.length)
       .map((repo) => {
         const { html_url: url } = repo
+        repo.name = repo.name === 'nexckycort.github.io' ? 'Portafolio' : repo.name
+
         const name = repo.name
           .split('-')
           .map((part) => part[0].toUpperCase() + part.slice(1))
