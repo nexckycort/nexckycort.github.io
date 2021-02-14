@@ -1,9 +1,10 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
+import path from 'path'
+import webpack from 'webpack'
+import CopyPlugin from 'copy-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-module.exports = {
+const config: webpack.Configuration = {
   entry: path.join(__dirname, '../src/main.ts'),
   mode: 'production',
   output: {
@@ -56,5 +57,7 @@ module.exports = {
       }
     ]
   },
-  devtool: 'eval-source-map'
+  devtool: 'inline-source-map'
 }
+
+export default config

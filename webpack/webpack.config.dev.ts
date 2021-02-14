@@ -1,7 +1,8 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import webpack from 'webpack'
 
-module.exports = {
+const config: webpack.Configuration = {
   entry: path.join(__dirname, '../src/main.ts'),
   mode: 'development',
   output: {
@@ -44,5 +45,7 @@ module.exports = {
       }
     ]
   },
-  devtool: 'eval-source-map'
+  devtool: 'inline-source-map'
 }
+
+export default config
