@@ -1,5 +1,5 @@
-import { pages } from './controllers'
-import './sass/main.scss'
+import { pages } from './app/controllers'
+import './styles.scss'
 
 const init = async (): Promise<void> => {
   const content = document.getElementById('root')

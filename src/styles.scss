@@ -1,0 +1,39 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/utilities';
+
+// Layout & components
+@import '../node_modules/bootstrap/scss/reboot';
+@import '../node_modules/bootstrap/scss/images';
+@import '../node_modules/bootstrap/scss/containers';
+@import '../node_modules/bootstrap/scss/grid';
+@import '../node_modules/bootstrap/scss/card';
+
+// Utilities
+@import '../node_modules/bootstrap/scss/utilities/api';
+
+@import './app/sass/main';
+
+body {
+  font: 16px/1.6 'Nunito Sans', sans-serif;
+  background: black;
+  color: #a6a3a3;
+}
+body,
+html {
+  height: 100vh;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a h5 {
+  font-weight: bold;
+}
+a p {
+  color: #a6a3a3;
+}
+a:hover {
+  color: teal;
+}
