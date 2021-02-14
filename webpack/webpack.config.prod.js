@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: path.join(__dirname, '../src/main.ts'),
@@ -13,7 +14,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: path.join(__dirname, '../src/assets'), to: path.resolve(__dirname, '../dist/assets') }]
+    })
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
@@ -39,7 +43,7 @@ module.exports = {
           'css-loader',
           // Compiles Sass to CSS
           'sass-loader'
-        ],
+        ]
       },
       {
         test: /\.html$/i,
@@ -50,7 +54,7 @@ module.exports = {
         include: /src/,
         use: [{ loader: 'ts-loader' }]
       }
-    ],
+    ]
   },
   devtool: 'eval-source-map'
 }

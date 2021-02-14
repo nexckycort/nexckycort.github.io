@@ -6,12 +6,12 @@ module.exports = {
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
+      template: './src/index.html'
+    })
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
@@ -42,7 +42,7 @@ module.exports = {
         include: /src/,
         use: [{ loader: 'ts-loader' }]
       }
-    ],
+    ]
   },
   devtool: 'eval-source-map'
 }
