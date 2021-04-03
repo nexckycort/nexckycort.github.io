@@ -2,20 +2,34 @@ import path from 'path'
 import webpack from 'webpack'
 import CopyPlugin from 'copy-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const config: webpack.Configuration = {
   entry: path.join(__dirname, '../src/main.ts'),
   mode: 'production',
   output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, '../dist')
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    },
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      // `...`,
+      new CssMinimizerPlugin()
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css'
+    }),
     new CopyPlugin({
       patterns: [{ from: path.join(__dirname, '../src/assets'), to: path.resolve(__dirname, '../dist/assets') }]
     })
