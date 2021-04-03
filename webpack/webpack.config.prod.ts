@@ -1,11 +1,10 @@
-import path from 'path'
-import webpack from 'webpack'
-import CopyPlugin from 'copy-webpack-plugin'
-import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import CopyPlugin from 'copy-webpack-plugin'
+import path from 'path'
 
-const config: webpack.Configuration = {
+const config = {
   entry: path.join(__dirname, '../src/main.ts'),
   mode: 'production',
   output: {
@@ -13,14 +12,11 @@ const config: webpack.Configuration = {
     path: path.resolve(__dirname, '../dist')
   },
   optimization: {
+    minimize: true,
     splitChunks: {
       chunks: 'all'
     },
-    minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-      // `...`,
-      new CssMinimizerPlugin()
-    ]
+    minimizer: [new CssMinimizerPlugin()]
   },
   plugins: [
     new HtmlWebpackPlugin({
