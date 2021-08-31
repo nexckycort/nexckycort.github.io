@@ -1,7 +1,6 @@
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import CopyPlugin from 'copy-webpack-plugin'
 import path from 'path'
 
 const config = {
@@ -25,9 +24,6 @@ const config = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'
-    }),
-    new CopyPlugin({
-      patterns: [{ from: path.join(__dirname, '../src/assets'), to: path.resolve(__dirname, '../dist/assets') }]
     })
   ],
   resolve: {
