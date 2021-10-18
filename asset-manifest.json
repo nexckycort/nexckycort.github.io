@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.adc08dac.chunk.css",
+    "main.js": "/static/js/main.b8800dec.chunk.js",
+    "main.js.map": "/static/js/main.b8800dec.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b81dc9f0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b81dc9f0.js.map",
+    "static/js/2.9498bf1c.chunk.js": "/static/js/2.9498bf1c.chunk.js",
+    "static/js/2.9498bf1c.chunk.js.map": "/static/js/2.9498bf1c.chunk.js.map",
+    "static/js/3.07466843.chunk.js": "/static/js/3.07466843.chunk.js",
+    "static/js/3.07466843.chunk.js.map": "/static/js/3.07466843.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.adc08dac.chunk.css.map": "/static/css/main.adc08dac.chunk.css.map",
+    "static/js/2.9498bf1c.chunk.js.LICENSE.txt": "/static/js/2.9498bf1c.chunk.js.LICENSE.txt",
+    "static/media/fonts.css": "/static/media/GT-Walsheim-Pro-Regular.5d003e71.woff2",
+    "static/media/me.f3293305.jpg": "/static/media/me.f3293305.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b81dc9f0.js",
+    "static/js/2.9498bf1c.chunk.js",
+    "static/css/main.adc08dac.chunk.css",
+    "static/js/main.b8800dec.chunk.js"
+  ]
+}
