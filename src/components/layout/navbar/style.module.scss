@@ -1,0 +1,28 @@
+.navLogo {
+  position: absolute;
+}
+
+nav {
+  background-color: lightblue;
+}
+
+.navbarNav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  display: inline-block;
+}
+
+.navLink {
+  color: black;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  background-color: lightcoral;
+}
