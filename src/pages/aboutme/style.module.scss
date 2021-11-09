@@ -1,0 +1,26 @@
+.aboutMeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.meWrapper {
+  width: 100%;
+}
+
+.me {
+  border-radius: 5px;
+  box-shadow: 0 0 64px rgb(0 0 0 / 15%);
+  width: 100%;
+}
+
+.aboutMe {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .aboutMe,
+  .meWrapper {
+    width: 40%;
+  }
+}
