@@ -19,12 +19,6 @@ body.dark {
   --bg-color: black;
 }
 
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
 .lined-link {
   display: inline-block;
   position: relative;

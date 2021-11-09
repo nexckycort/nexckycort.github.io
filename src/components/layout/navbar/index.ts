@@ -5,6 +5,18 @@ import { SunIcon, MoonIcon, UserIcon, BriefcaseIcon } from '../../icons'
 
 import style from './style.module.scss'
 
+const selectNavLink = (navElement: HTMLElement) => {
+  const navLinks = navElement.querySelectorAll('.lined-link') as unknown as Element[]
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener('click', () => {
+      if (!navLink.classList.contains('active')) {
+        navElement.querySelector('.lined-link.active')?.classList.remove('active')
+        navLink.classList.add('active')
+      }
+    })
+  })
+}
+
 const selectTheme = (navElement: HTMLElement) => {
   const toggleTheme = navElement.querySelector('#toggleTheme') as Element
   toggleTheme.addEventListener('click', () => {
@@ -34,6 +46,21 @@ const selectLanguage = (navElement: HTMLElement) => {
   })
 }
 
+const routes = [
+  {
+    name: 'Sobre mi',
+    path: '#',
+    icon: UserIcon,
+    key: 'aboutMe'
+  },
+  {
+    name: 'Portafolio',
+    path: '#/works',
+    icon: BriefcaseIcon,
+    key: 'portfolio'
+  }
+]
+
 const Navbar = () => {
   const toggleThemeIcon = () => {
     const { theme } = selectedTheme()
@@ -49,27 +76,30 @@ const Navbar = () => {
     <div>
       <ul class="${style.navbarNav}">
         <li class="${style.navItem}">
-          <a class="${style.navLink}" class="lined-link" href="#">
-            ${UserIcon}<span data-section="navbar" data-value="aboutMe">Sobre mi</span>
-          </a>
-        </li>
-        <li class="${style.navItem}">
-          <a class="${style.navLink}" href="#/works">
-            ${BriefcaseIcon}<span data-section="navbar" data-value="portfolio">Portafolio</span>
-          </a>
+          ${routes
+            .map(({ path, icon, key, name }) => {
+              const isActiveAboutMe = location.hash === '' && path === '#' ? 'active' : ''
+              const isActivePortfolio = location.hash === path ? 'active' : ''
+
+              return /* html */ `<a class="${style.navLink} ${isActiveAboutMe} ${isActivePortfolio} lined-link" href="${path}">
+                ${icon}<span data-section="navbar" data-value="${key}">${name}</span>
+              </a>`
+            })
+            .join('')}
         </li>
       </ul>
     </div>
     <div class="${style.wrapperLangTheme}">
-      <button id="lang" class="${style.lang}" name="btn lang">
+      <button id="lang" class="${style.lang}" aria-label="btn lang">
         ${language}
       </button>
-      <button id="toggleTheme" class="${style.toggleTheme}" name="btn toggle theme">
+      <button id="toggleTheme" class="${style.toggleTheme}" aria-label="btn toggle theme">
         ${toggleThemeIcon()}
       </button>
     </div>
 `
 
+  selectNavLink(navElement)
   selectTheme(navElement)
   selectLanguage(navElement)
 

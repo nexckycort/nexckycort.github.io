@@ -5,7 +5,7 @@ import { AboutMePage } from '../pages/aboutme'
 
 import { selectedLanguage } from '../helpers/selectedLang'
 
-const routes = {
+export const routes = {
   '/': AboutMePage,
   works: PortfolioPage
 }
@@ -20,7 +20,7 @@ export const router = async () => {
     footer.innerHTML = Footer()
   }
 
-  const hash = (location.hash.slice(1).toLocaleLowerCase().split('/')[1] ?? '/') as '/' | 'works'
+  const hash = (location.hash.slice(1).toLowerCase().split('/')[1] ?? '/') as '/' | 'works'
 
   content.innerHTML = routes[hash]()
   const { changeLanguage } = selectedLanguage()
