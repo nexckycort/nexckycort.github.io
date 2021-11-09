@@ -1,46 +1,77 @@
-import { SunIcon, MoonIcon } from '../../icons'
+import { LANGUAGE, selectedLanguage } from '../../../helpers/selectedLang'
+import { selectedTheme, THEME } from '../../../helpers/selectedTheme'
+
+import { SunIcon, MoonIcon, UserIcon, BriefcaseIcon } from '../../icons'
 
 import style from './style.module.scss'
 
-type Theme = 'light' | 'dark'
+const selectTheme = (navElement: HTMLElement) => {
+  const toggleTheme = navElement.querySelector('#toggleTheme') as Element
+  toggleTheme.addEventListener('click', () => {
+    document.body.classList.toggle('dark')
+    const { theme, setTheme } = selectedTheme()
+    if (theme === THEME.LIGTH) {
+      toggleTheme.innerHTML = SunIcon
+      setTheme(THEME.DARK)
+      return
+    }
+    toggleTheme.innerHTML = MoonIcon
+    setTheme(THEME.LIGTH)
+  })
+}
+
+const selectLanguage = (navElement: HTMLElement) => {
+  const langElement = navElement.querySelector('#lang') as Element
+  langElement.addEventListener('click', () => {
+    const { language, setLanguage, changeLanguage } = selectedLanguage()
+    let lang!: LANGUAGE
+    if (language === LANGUAGE.ES) lang = LANGUAGE.EN
+    else lang = LANGUAGE.ES
+
+    langElement.innerHTML = lang
+    setLanguage(lang)
+    void changeLanguage(lang)
+  })
+}
 
 const Navbar = () => {
-  const selectedTheme = () => (localStorage.getItem('theme') ?? 'light') as Theme
-
   const toggleThemeIcon = () => {
-    const theme = selectedTheme()
+    const { theme } = selectedTheme()
     if (theme === 'dark') document.body.classList.toggle('dark')
     return theme === 'light' ? MoonIcon : SunIcon
   }
 
+  const { language } = selectedLanguage()
+
   const navElement = document.createElement('nav')
+  navElement.classList.add(style.nav)
   navElement.innerHTML = /* html */ `
-    <div class="${style.navLogo}">
-      <img src="" alt="" />
-    </div>
     <div>
       <ul class="${style.navbarNav}">
-        <li class="${style.navItem}"><a class="${style.navLink}" href="#">Sobre mi</a></li>
-        <li class="${style.navItem}"><a class="${style.navLink}" href="#/works">Portafolio</a></li>
+        <li class="${style.navItem}">
+          <a class="${style.navLink}" class="lined-link" href="#">
+            ${UserIcon}<span data-section="navbar" data-value="aboutMe">Sobre mi</span>
+          </a>
+        </li>
+        <li class="${style.navItem}">
+          <a class="${style.navLink}" href="#/works">
+            ${BriefcaseIcon}<span data-section="navbar" data-value="portfolio">Portafolio</span>
+          </a>
+        </li>
       </ul>
     </div>
-    <button id="toggleTheme">
-      ${toggleThemeIcon()}
-    </button>
+    <div class="${style.wrapperLangTheme}">
+      <button id="lang" class="${style.lang}" name="btn lang">
+        ${language}
+      </button>
+      <button id="toggleTheme" class="${style.toggleTheme}" name="btn toggle theme">
+        ${toggleThemeIcon()}
+      </button>
+    </div>
 `
 
-  const toggleTheme = navElement.querySelector('#toggleTheme') as Element
-  toggleTheme.addEventListener('click', () => {
-    document.body.classList.toggle('dark')
-    const theme = selectedTheme()
-    if (theme === 'light') {
-      toggleTheme.innerHTML = SunIcon
-      localStorage.setItem('theme', 'dark')
-      return
-    }
-    toggleTheme.innerHTML = MoonIcon
-    localStorage.setItem('theme', 'light')
-  })
+  selectTheme(navElement)
+  selectLanguage(navElement)
 
   return navElement
 }

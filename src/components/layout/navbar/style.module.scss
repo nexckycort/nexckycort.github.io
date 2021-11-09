@@ -1,11 +1,8 @@
-.navLogo {
-  position: absolute;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
-
-nav {
-  background-color: lightblue;
-}
-
 .navbarNav {
   list-style: none;
   margin: 0;
@@ -17,12 +14,45 @@ nav {
 }
 
 .navLink {
-  color: black;
+  color: var(--text-color);
   display: block;
   padding: 10px;
   text-decoration: none;
+  svg {
+    width: 22px;
+    margin-right: -16px;
+    margin-bottom: 5px;
+    stroke: var(--text-color);
+  }
 }
 
 .navLink:hover {
   background-color: lightcoral;
+}
+
+.lang {
+  color: var(--text-color);
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  option {
+    color: var(--text-color);
+    background-color: black;
+    border: none;
+  }
+}
+
+.toggleTheme {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  svg {
+    width: 30px;
+  }
+}
+
+.wrapperLangTheme {
+  display: flex;
+  align-items: center;
 }

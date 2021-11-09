@@ -3,6 +3,8 @@ import { Footer, Navbar } from '../components/layout'
 import { PortfolioPage } from '../pages/portfolio'
 import { AboutMePage } from '../pages/aboutme'
 
+import { selectedLanguage } from '../helpers/selectedLang'
+
 const routes = {
   '/': AboutMePage,
   works: PortfolioPage
@@ -21,4 +23,6 @@ export const router = async () => {
   const hash = (location.hash.slice(1).toLocaleLowerCase().split('/')[1] ?? '/') as '/' | 'works'
 
   content.innerHTML = routes[hash]()
+  const { changeLanguage } = selectedLanguage()
+  await changeLanguage()
 }
