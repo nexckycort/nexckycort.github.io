@@ -8,7 +8,7 @@
     "prestart": "npm run build",
     "start": "http-server dist",
     "dev": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.config.ts --env COMPILE=development --open",
-    "lint": "eslint . --ext .ts --fix",
+    "lint": "eslint . --ext .ts --cache --fix",
     "format": "prettier --write src",
     "lhci:ci": "lhci autorun --config=./lighthouserc-ci.js",
     "lhci": "lhci autorun --config=./lighthouserc.js",
