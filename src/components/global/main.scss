@@ -1,4 +1,4 @@
-@import '../../../node_modules/normalize.css/normalize.css';
+@import "../../../node_modules/normalize.css/normalize.css";
 
 :root {
   --text-color: black;
@@ -27,12 +27,13 @@ body.dark {
   padding-bottom: 0.25em;
   transition: all 0.2s ease-out;
   will-change: transform, color;
-  &:after {
+
+  &::after {
     z-index: 1;
     position: absolute;
     bottom: -1px;
     left: 0;
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 5px;
@@ -42,11 +43,15 @@ body.dark {
     will-change: transform;
     transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
   }
-  &:hover:after,
-  &.active:after {
+
+  &:hover::after,
+  &.active::after {
     background-color: var(--primary);
     transform: scale(1);
     transform-origin: 0 50%;
-    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s ease-out, -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition:
+      transform 1s cubic-bezier(0.19, 1, 0.22, 1),
+      background-color 0.2s ease-out,
+      -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
