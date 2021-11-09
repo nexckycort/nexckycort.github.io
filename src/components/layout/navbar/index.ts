@@ -62,10 +62,16 @@ const routes = [
 ]
 
 const Navbar = () => {
+  const currentPath = location.hash === '' ? '#' : location.hash
+
   const toggleThemeIcon = () => {
     const { theme } = selectedTheme()
     if (theme === 'dark') document.body.classList.toggle('dark')
     return theme === 'light' ? MoonIcon : SunIcon
+  }
+
+  const isActive = (path: string) => {
+    return currentPath === path ? 'active' : ''
   }
 
   const { language } = selectedLanguage()
@@ -78,10 +84,7 @@ const Navbar = () => {
         <li class="${style.navItem}">
           ${routes
             .map(({ path, icon, key, name }) => {
-              const isActiveAboutMe = location.hash === '' && path === '#' ? 'active' : ''
-              const isActivePortfolio = location.hash === path ? 'active' : ''
-
-              return /* html */ `<a class="${style.navLink} ${isActiveAboutMe} ${isActivePortfolio} lined-link" href="${path}">
+              return /* html */ `<a class="${style.navLink} ${isActive(path)} lined-link" href="${path}">
                 ${icon}<span data-section="navbar" data-value="${key}">${name}</span>
               </a>`
             })
