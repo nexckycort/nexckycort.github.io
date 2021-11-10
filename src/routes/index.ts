@@ -22,7 +22,9 @@ export const router = async () => {
 
   const hash = (location.hash.slice(1).toLowerCase().split('/')[1] ?? '/') as '/' | 'works'
 
-  content.innerHTML = routes[hash]()
+  content.innerHTML = ''
+  content.append(await routes[hash]())
+
   const { changeLanguage } = selectedLanguage()
   await changeLanguage()
 }

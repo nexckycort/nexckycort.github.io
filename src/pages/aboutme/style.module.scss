@@ -1,4 +1,4 @@
-@import '../../components/common/global/variables';
+@import "../../components/common/global/variables";
 
 .aboutMeWrapper {
   display: flex;
@@ -20,12 +20,13 @@
 
 .rol {
   color: var(--text-color);
-  font-family: 'GT-Walsheim-Pro-Medium';
+  font-family: GT-Walsheim-Pro-Medium, sans-serif;
   margin-top: 3rem;
   margin-bottom: 2rem;
   text-align: center;
   text-transform: uppercase;
   word-spacing: 8px;
+
   @media (min-width: $breakpointPhone) {
     font-size: 1.8em;
   }
@@ -35,8 +36,9 @@
   color: var(--text-color);
   font-size: 3rem;
   text-transform: capitalize;
-  font-family: 'GT-Walsheim-Pro-Bold';
+  font-family: GT-Walsheim-Pro-Bold, sans-serif;
   text-align: center;
+
   @media (max-width: $breakpointPhone) {
     font-size: 2rem;
   }
@@ -59,15 +61,16 @@
   color: var(--text-gray);
   font-size: 1rem;
   letter-spacing: 2px;
-  font-family: 'GT-Walsheim-Pro-Medium';
+  font-family: GT-Walsheim-Pro-Medium, sans-serif;
   border: 5px solid #e8e7e7;
   display: block;
-  margin: 6rem 0 2rem 0;
+  margin: 6rem 0 2rem;
   padding: 2rem;
   text-align: center;
   text-transform: uppercase;
   border-radius: 0.5rem;
   transition: color 300ms ease-in-out, border-color 400ms ease-in-out;
+
   &:hover {
     color: var(--color-primary);
     border-color: var(--color-primary);
@@ -79,18 +82,22 @@
   .meWrapper {
     width: 50%;
   }
+
   .aboutMeWrapper {
     margin-top: 6rem;
   }
+
   .description,
   .meWrapper,
   .title {
     text-align: left;
   }
+
   .title,
   .description {
     padding: 0.8rem;
   }
+
   .me,
   .rol {
     width: 80%;
