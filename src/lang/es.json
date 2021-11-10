@@ -3,9 +3,9 @@
     "aboutMe": "Sobre mi",
     "portfolio": "Portafolio"
   },
-  "aboutMe": {
+  "profile": {
     "title": "Hola, yo soy Nestor",
-    "subTitle": "Software Developer",
+    "rol": "Software Developer",
     "description": "Soy un desarrollador apasionado por desarrollar aplicaciones Full Stack con tecnologías libres y de código abierto de Colombia con experiencia en el diseño, desarrollo, análisis e implementación de aplicaciones monolíticas y cliente-servidor. Con conocimiento de JavaScript, TypeScript, React, Node.js, bases de datos relacionales y no relacionales; SonarQube, Docker, CI / CD (GitLab) utilizando metodologías ágiles.",
     "cv": "ver cv"
   }
