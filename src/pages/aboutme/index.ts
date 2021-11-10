@@ -13,7 +13,7 @@ export const AboutMePage = () => {
     <div class="${style.aboutMe}">
       <h1 class="${style.title}" data-section="profile" data-value="title">${profile.title}</h1>
       <p class="${style.description}" data-section="profile" data-value="description">${profile.description}</p>
-      <a href="https://bit.ly/3FZSVca" target="_blank" data-section="profile" data-value="cv">${profile.cv}</a>
+      <a class="${style.resume}" href="https://bit.ly/3FZSVca" target="_blank" rel="noopener" data-section="profile" data-value="cv">${profile.cv}</a>
     </div>
   </div>`
 }
