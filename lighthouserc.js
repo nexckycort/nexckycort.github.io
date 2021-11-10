@@ -2,7 +2,7 @@ module.exports = {
   ci: {
     collect: {
       startServerCommand: 'npm start',
-      numberOfRuns: 1,
+      numberOfRuns: 2,
       url: ['http://localhost:8080'],
       chromePath: '/usr/bin/google-chrome' // WSL
     },
