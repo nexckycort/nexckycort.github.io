@@ -1,8 +1,10 @@
 name: Deploy Netlify Push CI
 on:
   push:
-    paths-ignore:
-      - ".github/**"
+    paths:
+      - "src/**/*"
+      - "webpack/**"
+      - "public/**"
 
 jobs:
   deploy:

@@ -1,5 +1,11 @@
 name: Lighthouse CI
-on: [push]
+on:
+  push:
+    paths:
+      - "src/**/*"
+      - "webpack/**"
+      - "public/**"
+
 jobs:
   lhci:
     name: Lighthouse CI
