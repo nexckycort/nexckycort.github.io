@@ -7,7 +7,7 @@ const config = {
   entry: path.join(__dirname, '../src/main.ts'),
   mode: 'production',
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].bundle.js',
     path: path.resolve(__dirname, '../dist')
   },
   optimization: {
@@ -19,7 +19,7 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './public/index.html'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
@@ -51,6 +51,10 @@ const config = {
           // Compiles Sass to CSS
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
       },
       {
         test: /\.html$/i,

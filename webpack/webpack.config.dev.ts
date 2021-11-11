@@ -11,7 +11,7 @@ const config: webpack.Configuration = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './public/index.html'
     })
   ],
   resolve: {
@@ -33,6 +33,10 @@ const config: webpack.Configuration = {
           // Compiles Sass to CSS
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
       },
       {
         test: /\.html$/i,
