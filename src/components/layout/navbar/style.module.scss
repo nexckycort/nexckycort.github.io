@@ -1,4 +1,4 @@
-@import "../../common/global/variables";
+@import '../../common/global/variables';
 
 .nav {
   display: flex;
@@ -19,8 +19,7 @@
 .navLink {
   color: var(--text-color);
   display: block;
-  padding: 10px;
-  text-decoration: none;
+  padding: 0;
   margin-right: 1rem;
   font-size: 1.2rem;
 

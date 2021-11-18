@@ -17,7 +17,7 @@ export const router = async () => {
 
   if (header.childNodes.length === 0 && footer.childNodes.length === 0) {
     header.append(Navbar())
-    footer.innerHTML = Footer()
+    footer.append(Footer())
   }
 
   const hash = (location.hash.slice(1).toLowerCase().split('/')[1] ?? '/') as '/' | 'works'

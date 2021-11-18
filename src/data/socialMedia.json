@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "name": "github",
+    "url": "https://github.com/nexckycort"
+  },
+  {
+    "id": 1,
+    "name": "linkedin",
+    "url": "https://www.linkedin.com/in/nexckycort"
+  },
+  {
+    "id": 2,
+    "name": "twitter",
+    "url": "https://twitter.com/nexckycort"
+  },
+  {
+    "id": 3,
+    "name": "instagram",
+    "url": "https://www.instagram.com/nexckycort"
+  }
+]
