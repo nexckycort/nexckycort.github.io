@@ -26,6 +26,11 @@ body.dark {
   --bg-color: black;
 }
 
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
 .lined-link {
   display: inline-block;
   position: relative;
