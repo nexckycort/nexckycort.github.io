@@ -9,6 +9,9 @@
     "description": "I'm a developer passionate about developing Full Stack applications with free and open source technologies from Colombia with experience in the design, development, analysis and implementation of monolithic and client-server applications. With knowledge of JavaScript, TypeScript, React, Node.js, relational and non-relational databases; SonarQube, Docker, CI / CD (GitLab) using agile methodologies.",
     "cv": "see resume"
   },
+  "portfolio": {
+    "title": "My Projects"
+  },
   "footer": {
     "quote": "Do you want to talk to me?",
     "contactMe": "contact me"

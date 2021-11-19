@@ -2,12 +2,15 @@ import { Footer, Navbar } from '../components/layout'
 
 import { PortfolioPage } from '../pages/portfolio'
 import { AboutMePage } from '../pages/aboutme'
+import { ProjectPage } from '../pages/project'
 
 import { selectedLanguage } from '../helpers/selectedLang'
 
-export const routes = {
-  '/': AboutMePage,
-  works: PortfolioPage
+export const routes: {
+  [key: string]: () => Promise<HTMLDivElement>
+} = {
+  '': AboutMePage,
+  '#/works': PortfolioPage
 }
 
 export const router = async () => {
@@ -20,10 +23,15 @@ export const router = async () => {
     footer.append(Footer())
   }
 
-  const hash = (location.hash.slice(1).toLowerCase().split('/')[1] ?? '/') as '/' | 'works'
+  const hash = location.hash.toLowerCase()
 
   content.innerHTML = ''
-  content.append(await routes[hash]())
+  if (routes[hash] !== undefined) {
+    content.append(await routes[hash]())
+  } else {
+    const [, , project] = hash.split('/')
+    content.append(await ProjectPage(project))
+  }
 
   const { changeLanguage } = selectedLanguage()
   await changeLanguage()

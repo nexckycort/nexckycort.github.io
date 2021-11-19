@@ -1,12 +1,27 @@
-@import "../../components/common/global/variables";
+@import '../../components/common/global/variables';
 
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
   padding: 1.5rem;
+}
+
+.title {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: (translate(-50%, -50%));
+
+  color: var(--text-color);
+  font-family: GT-Walsheim-Pro-Medium, sans-serif;
+  font-size: 1.8em;
+
+  @media (min-width: $breakpointPhone) {
+    font-size: 2em;
+  }
 }
 
 .workTitle {
@@ -32,7 +47,7 @@
 }
 
 .wrapperImage::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -74,7 +89,7 @@
 
 @media (min-width: $breakpointLarge) {
   .container {
-    margin-top: 6rem;
+    margin-top: 6.4rem;
   }
 
   .workTitle {
