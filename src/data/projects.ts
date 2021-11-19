@@ -5,7 +5,7 @@ interface Projects {
   category: string
   description: string
   tags: string[]
-  sourceCode: string
+  sourceCode: string | null
   demoView: string | null
 }
 
@@ -39,7 +39,17 @@ const projects: Projects[] = [
     description: 'Implementation of the rijndael encryption algorithm.',
     tags: ['nodejs', 'typescript', 'patterns-design', 'solid', 'unit-test', 'webpack', 'cryptography'],
     sourceCode: 'https://github.com/nexckycort/rijndael-nodejs',
-    demoView: null
+    demoView: 'https://www.npmjs.com/package/@nexckycort/rijndael-nodejs'
+  },
+  {
+    title: 'cra template',
+    slug: 'cra-template',
+    image: 'https://create-react-app.dev/img/logo.svg',
+    category: 'Software Architecture',
+    description: 'This is the template that i usually use when i work with React.',
+    tags: ['nodejs', 'react', 'typescript', 'scss', 'webpack'],
+    sourceCode: 'https://github.com/nexckycort/cra-template',
+    demoView: 'https://www.npmjs.com/package/@nexckycort/cra-template'
   },
   {
     title: 'monolito react nodejs',

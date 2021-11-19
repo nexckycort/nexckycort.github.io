@@ -1,4 +1,4 @@
-@import '../../components/common/global/variables';
+@import "../../components/common/global/variables";
 
 .container {
   display: flex;
@@ -40,14 +40,14 @@
 }
 
 .workImage {
-  background-color: lightpink;
+  background-color: rgb(255 253 253);
   width: 100%;
   display: block;
   transition: transform 200ms;
 }
 
 .wrapperImage::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -60,6 +60,8 @@
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 0.5em;
+  outline: 2px solid rgb(221 218 218 / 70.5%);
+  outline-offset: -4px;
 
   &:hover {
     .workImage {

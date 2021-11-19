@@ -10,10 +10,30 @@
     "cv": "ver cv"
   },
   "portfolio": {
-    "title": "Mis Proyectos"
+    "title": "Mis Proyectos",
+    "btnSourceCode": "ver codigo fuente",
+    "btnViewDemo": "ver demo"
   },
   "footer": {
     "quote": "¿Quieres hablar conmigo?",
     "contactMe": "contáctame"
+  },
+  "backend-clean-architecture-nodejs": {
+    "description": "Esta arquitectura es una investigación extensa, desde mi experiencia lidiando con un proyecto node.js mal estructurado, malos patrones e innumerables horas de refactorización de código y moviendo cosas de un lugar a otro."
+  },
+  "monolito-react-nodejs": {
+    "description": "Implementación de aplicación web con arquitectura cliente-servidor con la funcionalidad de fusionar ambos proyectos al compilar para implementar una aplicación monolítica."
+  },
+  "keycloak-demo-react": {
+    "description": "Demostración de la integración SSO y Keycloak con React."
+  },
+  "rijndael-nodejs": {
+    "description": "Implementación del algoritmo de encriptación rijndael."
+  },
+  "frontend-clean-architecture-reactjs": {
+    "description": "Este es un proyecto de arquitectura clean code con React."
+  },
+  "cra-template": {
+    "description": "Esta es la plantilla base que suelo usar cuando trabajo con React."
   }
 }

@@ -1,4 +1,4 @@
-@import '../../components/common/global/variables';
+@import "../../components/common/global/variables";
 
 .projectWrapper {
   display: flex;
@@ -52,9 +52,10 @@
   letter-spacing: 2px;
   font-family: GT-Walsheim-Pro-Medium, sans-serif;
   border: 5px solid #e8e7e7;
-  display: block;
+  display: inline-block;
   margin: 2rem 0;
-  padding: 2rem;
+  padding: 2rem 0;
+  width: 40vw;
   text-align: center;
   text-transform: uppercase;
   border-radius: 0.5rem;
@@ -70,6 +71,10 @@
   .projectDescriptionWrapper,
   .projectImgWrapper {
     width: 50%;
+  }
+
+  .projectDescriptionWrapper {
+    text-align: left;
   }
 
   .projectWrapper {
@@ -94,5 +99,9 @@
 
   .projectImgWrapper {
     margin-top: 1rem;
+  }
+
+  .btn {
+    width: 48%;
   }
 }
