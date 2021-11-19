@@ -1,10 +1,13 @@
 name: Deploy Netlify Push CI
 on:
   push:
+    branches-ignore:
+      - develop
+      - main
     paths:
-      - "src/**/*"
-      - "webpack/**"
-      - "public/**"
+      - 'src/**/*'
+      - 'webpack/**'
+      - 'public/**'
 
 jobs:
   deploy:
@@ -19,7 +22,7 @@ jobs:
           node-version: 16.x
 
       - name: Install dependencies and build
-        run: | 
+        run: |
           npm ci
           npm run build
 
