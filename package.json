@@ -13,7 +13,7 @@
     "format": "prettier --write src/**/*.ts",
     "lhci:ci": "lhci autorun --config=./lighthouserc-ci.js",
     "lhci": "lhci autorun --config=./lighthouserc.js",
-    "deploy": "gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist",
     "prepare": "husky install"
   },
   "devDependencies": {
