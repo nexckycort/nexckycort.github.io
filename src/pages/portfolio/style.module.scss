@@ -1,8 +1,83 @@
-.construction {
+@import '../../components/common/global/variables';
+
+.container {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  height: 90vh;
-  font-size: 4rem;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+
+.workTitle {
+  color: var(--color-primary);
+  font-family: GT-Walsheim-Pro-Medium, sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
   font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: (translate(-50%, -50%));
+
+  z-index: 2;
+  opacity: 0%;
+}
+
+.workImage {
+  background-color: lightpink;
+  width: 100%;
+  display: block;
+  transition: transform 200ms;
+}
+
+.wrapperImage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.wrapperImage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+
+  &:hover {
+    .workImage {
+      transform: scale(1.1);
+    }
+
+    &::after {
+      background-color: rgb($color: #000 $alpha: 80%);
+      transition: background-color 300ms;
+    }
+
+    .workTitle {
+      opacity: 100%;
+      transition: opacity 300ms;
+    }
+  }
+}
+
+.wrapperImage a {
+  display: block;
+}
+
+.gallery {
+  columns: 5 320px;
+  column-gap: 0.5em;
+}
+
+@media (min-width: $breakpointLarge) {
+  .container {
+    margin-top: 6rem;
+  }
+
+  .workTitle {
+    font-size: 1.8rem;
+  }
 }
