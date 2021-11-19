@@ -13,9 +13,11 @@
   margin-right: auto;
 }
 
-.me {
+.image {
   border-radius: 5px;
   width: 100%;
+  outline: 2px solid rgb(221 218 218 / 70.5%);
+  outline-offset: -4px;
 }
 
 .title {
@@ -48,14 +50,14 @@
   background-color: transparent;
   text-decoration: none;
   color: var(--text-gray);
-  font-size: 1rem;
-  letter-spacing: 2px;
+  font-size: 0.8rem;
+  letter-spacing: 0.8px;
   font-family: GT-Walsheim-Pro-Medium, sans-serif;
   border: 5px solid #e8e7e7;
   display: inline-block;
   margin: 2rem 0;
   padding: 2rem 0;
-  width: 40vw;
+  width: 46%;
   text-align: center;
   text-transform: uppercase;
   border-radius: 0.5rem;
@@ -102,6 +104,6 @@
   }
 
   .btn {
-    width: 48%;
+    width: 44%;
   }
 }

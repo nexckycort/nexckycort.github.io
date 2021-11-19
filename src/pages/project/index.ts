@@ -16,7 +16,7 @@ export const ProjectPage = async (slug: string) => {
   divElement.classList.add(style.projectWrapper)
   divElement.innerHTML = /* html */ `
     <div class="${style.projectImgWrapper}">
-      <img src="${project.image}" class="${style.me}" alt="me" />
+      <img src="${project.image}" class="${style.image}" alt="me" />
       <h2 class="${style.title}">${project.title}</h2>
     </div>
     <div class="${style.projectDescriptionWrapper}">
