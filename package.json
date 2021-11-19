@@ -10,7 +10,7 @@
     "dev": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.config.ts --env COMPILE=development --open",
     "lint": "eslint . --ext .ts --cache --fix",
     "lintstyle": "stylelint '**/*.scss' --fix",
-    "format": "prettier --write src",
+    "format": "prettier --write src/**/*.ts",
     "lhci:ci": "lhci autorun --config=./lighthouserc-ci.js",
     "lhci": "lhci autorun --config=./lighthouserc.js",
     "deploy": "gh-pages -d dist",
