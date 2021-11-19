@@ -31,9 +31,15 @@
     "description": "Implementación del algoritmo de encriptación rijndael."
   },
   "frontend-clean-architecture-reactjs": {
-    "description": "Este es un proyecto de arquitectura clean code con React."
+    "description": "Este es un proyecto de una arquitectura clean code con React."
   },
   "cra-template": {
     "description": "Esta es la plantilla base que suelo usar cuando trabajo con React."
+  },
+  "my-portfolio": {
+    "description": "Este proyecto es mi sitio web personal donde destaco mis proyectos. Está construido con las tecnologías HTML, TypeScript, Sass y empaquetado con Webpack."
+  },
+  "registration-and-login-template-nodejs": {
+    "description": "En este proyecto, creo un inicio de sesión. Además, también creamos un CRUD  de usuario con NODEJS y PostgreSQL, con envio de correo para activar la cuenta."
   }
 }

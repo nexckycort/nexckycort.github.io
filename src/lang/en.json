@@ -35,5 +35,11 @@
   },
   "cra-template": {
     "description": "This is the base template that i usually use when i work with React."
+  },
+  "my-portfolio": {
+    "description": "This project is my personal website where I highlight my projects. It is built with the HTML, TypeScript, Sass technologies and packaged with Webpack."
+  },
+  "registration-and-login-template-nodejs": {
+    "description": "In this project, I create a login. In addition, we also create a user CRUD with NODEJS and PostgreSQL, with sending mail to activate the account."
   }
 }

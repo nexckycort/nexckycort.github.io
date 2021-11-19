@@ -11,6 +11,17 @@ interface Projects {
 
 const projects: Projects[] = [
   {
+    title: 'my portfolio',
+    slug: 'my-portfolio',
+    image: 'https://user-images.githubusercontent.com/50475272/142638193-83ea016a-e6e3-407c-bbab-916101949a7a.png',
+    category: 'Web development',
+    description:
+      'This project is my personal website where I highlight my projects. It is built with the HTML, TypeScript, Sass technologies and packaged with Webpack.',
+    tags: ['nodejs', 'typescript', 'webpack', 'scss', 'git hook', 'git flow', 'eslint', 'prettier'],
+    sourceCode: 'https://github.com/nexckycort/nexckycort.github.io',
+    demoView: null
+  },
+  {
     title: 'backend clean architecture nodejs',
     slug: 'backend-clean-architecture-nodejs',
     image: 'https://user-images.githubusercontent.com/50475272/137671622-13fa257b-eafe-40f5-a2c5-e2f1070015a8.jpg',
@@ -32,9 +43,20 @@ const projects: Projects[] = [
     demoView: null
   },
   {
+    title: 'registration and login template nodejs',
+    slug: 'registration-and-login-template-nodejs',
+    image: 'https://user-images.githubusercontent.com/50475272/142643185-ea0aaa7c-d1af-49e7-82bb-978482d0105c.png',
+    category: 'Software Architecture',
+    description:
+      'In this project, I create a login. In addition, we also create a user CRUD with NODEJS and PostgreSQL, with sending mail to activate the account.',
+    tags: ['nodejs', 'typescript', 'patterns-design', 'solid', 'unit-test', 'e2e-test', 'webpack', 'pipeline'],
+    sourceCode: 'https://github.com/nexckycort/registration-and-login-template-nodejs',
+    demoView: null
+  },
+  {
     title: 'rijndael nodejs',
     slug: 'rijndael-nodejs',
-    image: 'https://user-images.githubusercontent.com/50475272/137672239-c0f352b8-c3c0-4486-ac96-d57d0481d83e.png',
+    image: 'https://user-images.githubusercontent.com/50475272/142638808-33818c5a-e71f-48e3-96b1-7bc592d9f744.png',
     category: 'Software Architecture',
     description: 'Implementation of the rijndael encryption algorithm.',
     tags: ['nodejs', 'typescript', 'patterns-design', 'solid', 'unit-test', 'webpack', 'cryptography'],
@@ -42,7 +64,7 @@ const projects: Projects[] = [
     demoView: 'https://www.npmjs.com/package/@nexckycort/rijndael-nodejs'
   },
   {
-    title: 'cra template',
+    title: 'my custom cra template',
     slug: 'cra-template',
     image: 'https://create-react-app.dev/img/logo.svg',
     category: 'Software Architecture',
@@ -76,7 +98,7 @@ const projects: Projects[] = [
     slug: 'frontend-clean-architecture-reactjs',
     image: 'https://user-images.githubusercontent.com/50475272/137676002-1e2f8214-c3a4-470b-84bf-2e866f16fd26.png',
     category: 'Software Architecture',
-    description: 'This is a clean frontend architecture project .',
+    description: 'This is a project of a clean frontend architecture.',
     tags: ['react', 'typescript', 'patterns-design', 'solid'],
     sourceCode: 'https://github.com/nexckycort/frontend-clean-architecture-reactjs',
     demoView: null
