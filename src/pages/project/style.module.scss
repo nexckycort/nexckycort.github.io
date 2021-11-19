@@ -1,24 +1,26 @@
 @import "../../components/common/global/variables";
 
-.aboutMeWrapper {
+.projectWrapper {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   margin-top: 2rem;
 }
 
-.meWrapper {
+.projectImgWrapper {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.me {
-  border-radius: 5px;
+.image {
+  border-radius: 15px;
   width: 100%;
+  outline: 2px solid rgb(221 218 218 / 70.5%);
+  outline-offset: -4px;
 }
 
-.rol {
+.title {
   color: var(--text-color);
   font-family: GT-Walsheim-Pro-Medium, sans-serif;
   margin-top: 3rem;
@@ -32,41 +34,30 @@
   }
 }
 
-.title {
-  color: var(--text-color);
-  font-size: 3rem;
-  text-transform: capitalize;
-  font-family: GT-Walsheim-Pro-Bold, sans-serif;
-  text-align: center;
-
-  @media (max-width: $breakpointPhone) {
-    font-size: 2rem;
-    margin-top: 0;
-  }
-}
-
 .description {
   font-size: 1.2rem;
+  margin-top: 0;
   line-height: 2;
   color: var(--text-gray);
   text-align: center;
 }
 
-.aboutMe {
+.projectDescriptionWrapper {
   width: 100%;
 }
 
-.resume {
+.btn {
   background-color: transparent;
   text-decoration: none;
   color: var(--text-gray);
-  font-size: 1rem;
-  letter-spacing: 2px;
+  font-size: 0.8rem;
+  letter-spacing: 0.8px;
   font-family: GT-Walsheim-Pro-Medium, sans-serif;
   border: 5px solid var(--border-primary);
-  display: block;
-  margin: 6rem 0 2rem;
-  padding: 2rem;
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  width: 46%;
   text-align: center;
   text-transform: uppercase;
   border-radius: 0.5rem;
@@ -79,17 +70,21 @@
 }
 
 @media (min-width: $breakpointLarge) {
-  .aboutMe,
-  .meWrapper {
+  .projectDescriptionWrapper,
+  .projectImgWrapper {
     width: 50%;
   }
 
-  .aboutMeWrapper {
+  .projectDescriptionWrapper {
+    text-align: left;
+  }
+
+  .projectWrapper {
     margin-top: 6rem;
   }
 
   .description,
-  .meWrapper,
+  .projectImgWrapper,
   .title {
     text-align: left;
   }
@@ -100,7 +95,16 @@
   }
 
   .me,
-  .rol {
+  .title {
     width: 80%;
+  }
+
+  .projectImgWrapper {
+    margin-top: 1rem;
+  }
+
+  .btn {
+    width: 44%;
+    margin: 2rem 0 2rem 1rem;
   }
 }

@@ -1,6 +1,6 @@
 name: Deploy Netlify Dev CI
 on:
-  pull_request:
+  push:
     branches:
       - develop
 
@@ -17,7 +17,7 @@ jobs:
           node-version: 16.x
 
       - name: Install dependencies and build
-        run: | 
+        run: |
           npm ci
           npm run build
 
