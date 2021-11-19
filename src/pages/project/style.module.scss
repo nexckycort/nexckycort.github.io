@@ -1,0 +1,110 @@
+@import "../../components/common/global/variables";
+
+.projectWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.projectImgWrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  border-radius: 15px;
+  width: 100%;
+  outline: 2px solid rgb(221 218 218 / 70.5%);
+  outline-offset: -4px;
+}
+
+.title {
+  color: var(--text-color);
+  font-family: GT-Walsheim-Pro-Medium, sans-serif;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 8px;
+
+  @media (min-width: $breakpointPhone) {
+    font-size: 1.8em;
+  }
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-top: 0;
+  line-height: 2;
+  color: var(--text-gray);
+  text-align: center;
+}
+
+.projectDescriptionWrapper {
+  width: 100%;
+}
+
+.btn {
+  background-color: transparent;
+  text-decoration: none;
+  color: var(--text-gray);
+  font-size: 0.8rem;
+  letter-spacing: 0.8px;
+  font-family: GT-Walsheim-Pro-Medium, sans-serif;
+  border: 5px solid var(--border-primary);
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  width: 46%;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: color 300ms ease-in-out, border-color 400ms ease-in-out;
+
+  &:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
+
+@media (min-width: $breakpointLarge) {
+  .projectDescriptionWrapper,
+  .projectImgWrapper {
+    width: 50%;
+  }
+
+  .projectDescriptionWrapper {
+    text-align: left;
+  }
+
+  .projectWrapper {
+    margin-top: 6rem;
+  }
+
+  .description,
+  .projectImgWrapper,
+  .title {
+    text-align: left;
+  }
+
+  .title,
+  .description {
+    padding: 0.8rem;
+  }
+
+  .me,
+  .title {
+    width: 80%;
+  }
+
+  .projectImgWrapper {
+    margin-top: 1rem;
+  }
+
+  .btn {
+    width: 44%;
+    margin: 2rem 0 2rem 1rem;
+  }
+}

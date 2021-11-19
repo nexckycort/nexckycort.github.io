@@ -1,0 +1,45 @@
+{
+  "navbar": {
+    "aboutMe": "Sobre mi",
+    "portfolio": "Portafolio"
+  },
+  "profile": {
+    "title": "Hola, yo soy Nestor",
+    "rol": "Software Developer",
+    "description": "Soy un desarrollador apasionado por desarrollar aplicaciones Full Stack con tecnologías libres y de código abierto de Colombia con experiencia en el diseño, desarrollo, análisis e implementación de aplicaciones monolíticas y cliente-servidor. Con conocimiento de JavaScript, TypeScript, React, Node.js, bases de datos relacionales y no relacionales; SonarQube, Docker, CI / CD (GitLab) utilizando metodologías ágiles.",
+    "cv": "ver cv"
+  },
+  "portfolio": {
+    "title": "Mis Proyectos",
+    "btnSourceCode": "ver codigo fuente",
+    "btnViewDemo": "ver demo"
+  },
+  "footer": {
+    "quote": "¿Quieres hablar conmigo?",
+    "contactMe": "contáctame"
+  },
+  "backend-clean-architecture-nodejs": {
+    "description": "Esta arquitectura es una investigación extensa, desde mi experiencia lidiando con un proyecto node.js mal estructurado, malos patrones e innumerables horas de refactorización de código y moviendo cosas de un lugar a otro."
+  },
+  "monolito-react-nodejs": {
+    "description": "Implementación de aplicación web con arquitectura cliente-servidor con la funcionalidad de fusionar ambos proyectos al compilar para implementar una aplicación monolítica."
+  },
+  "keycloak-demo-react": {
+    "description": "Demostración de la integración SSO y Keycloak con React."
+  },
+  "rijndael-nodejs": {
+    "description": "Implementación del algoritmo de encriptación rijndael."
+  },
+  "frontend-clean-architecture-reactjs": {
+    "description": "Este es un proyecto de una arquitectura clean code con React."
+  },
+  "cra-template": {
+    "description": "Esta es la plantilla base que suelo usar cuando trabajo con React."
+  },
+  "my-portfolio": {
+    "description": "Este proyecto es mi sitio web personal donde destaco mis proyectos. Está construido con las tecnologías HTML, TypeScript, Sass y empaquetado con Webpack."
+  },
+  "registration-and-login-template-nodejs": {
+    "description": "En este proyecto, creo un inicio de sesión. Además, también creamos un CRUD  de usuario con NODEJS y PostgreSQL, con envio de correo para activar la cuenta."
+  }
+}

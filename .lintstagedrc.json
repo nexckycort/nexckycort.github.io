@@ -1,8 +1,4 @@
 {
-  "*.ts": [
-    "prettier --write src",
-    "eslint 'src/***.ts' --fix",
-    "npm run build",
-    "git add"
-  ]
+  "*.ts": ["npm run lint", "npm run format"],
+  "*.scss": ["npm run lintstyle"]
 }

@@ -1,0 +1,109 @@
+@import "../../components/common/global/variables";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.8rem;
+  color: var(--text-color);
+  font-family: GT-Walsheim-Pro-Medium, sans-serif;
+  font-size: 1.8em;
+
+  @media (min-width: $breakpointPhone) {
+    font-size: 2em;
+  }
+}
+
+.workTitle {
+  color: var(--color-primary);
+  font-family: GT-Walsheim-Pro-Medium, sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: (translate(-50%, -50%));
+
+  z-index: 2;
+  opacity: 100%;
+}
+
+.workImage {
+  background-color: rgb(255 253 253);
+  width: 100%;
+  display: block;
+  transition: transform 200ms;
+}
+
+.wrapperImage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.wrapperImage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+  outline: 2px solid var(--border-primary);
+  outline-offset: -4px;
+
+  @media (max-width: $breakpointLarge) {
+    &::after {
+      background-color: rgb(0 0 0 / 80%);
+      transition: background-color 300ms;
+    }
+  }
+}
+
+.wrapperImage a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.gallery {
+  columns: 5 320px;
+  column-gap: 0.5em;
+}
+
+@media (min-width: $breakpointLarge) {
+  .title {
+    margin-top: 5.6rem;
+  }
+
+  .workTitle {
+    font-size: 1.8rem;
+    opacity: 0%;
+  }
+
+  .wrapperImage {
+    &:hover {
+      .workImage {
+        transform: scale(1.1);
+      }
+
+      &::after {
+        background-color: rgb(0 0 0 / 80%);
+        transition: background-color 300ms;
+      }
+
+      .workTitle {
+        opacity: 100%;
+        transition: opacity 300ms;
+      }
+    }
+  }
+}

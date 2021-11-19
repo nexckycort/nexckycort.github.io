@@ -1,0 +1,106 @@
+@import "../../components/common/global/variables";
+
+.aboutMeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.meWrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.me {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.rol {
+  color: var(--text-color);
+  font-family: GT-Walsheim-Pro-Medium, sans-serif;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 8px;
+
+  @media (min-width: $breakpointPhone) {
+    font-size: 1.8em;
+  }
+}
+
+.title {
+  color: var(--text-color);
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-family: GT-Walsheim-Pro-Bold, sans-serif;
+  text-align: center;
+
+  @media (max-width: $breakpointPhone) {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--text-gray);
+  text-align: center;
+}
+
+.aboutMe {
+  width: 100%;
+}
+
+.resume {
+  background-color: transparent;
+  text-decoration: none;
+  color: var(--text-gray);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-family: GT-Walsheim-Pro-Medium, sans-serif;
+  border: 5px solid var(--border-primary);
+  display: block;
+  margin: 6rem 0 2rem;
+  padding: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: color 300ms ease-in-out, border-color 400ms ease-in-out;
+
+  &:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
+
+@media (min-width: $breakpointLarge) {
+  .aboutMe,
+  .meWrapper {
+    width: 50%;
+  }
+
+  .aboutMeWrapper {
+    margin-top: 6rem;
+  }
+
+  .description,
+  .meWrapper,
+  .title {
+    text-align: left;
+  }
+
+  .title,
+  .description {
+    padding: 0.8rem;
+  }
+
+  .me,
+  .rol {
+    width: 80%;
+  }
+}
