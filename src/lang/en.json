@@ -1,7 +1,8 @@
 {
   "navbar": {
     "aboutMe": "About me",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "contact": "Contact me"
   },
   "profile": {
     "title": "Hello, I’m Nestor",

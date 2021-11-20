@@ -1,7 +1,8 @@
 import { Footer, Navbar } from '../components/layout'
 
-import { PortfolioPage } from '../pages/portfolio'
 import { AboutMePage } from '../pages/aboutme'
+import { PortfolioPage } from '../pages/portfolio'
+import { ContactPage } from '../pages/contact'
 import { ProjectPage } from '../pages/project'
 
 import { selectedLanguage } from '../helpers/selectedLang'
@@ -10,7 +11,8 @@ export const routes: {
   [key: string]: () => Promise<HTMLDivElement>
 } = {
   '': AboutMePage,
-  '#/works': PortfolioPage
+  '#/works': PortfolioPage,
+  '#/contact': ContactPage
 }
 
 export const router = async () => {

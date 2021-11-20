@@ -1,7 +1,7 @@
 import { LANGUAGE, selectedLanguage } from '../../../helpers/selectedLang'
 import { selectedTheme, THEME } from '../../../helpers/selectedTheme'
 
-import { SunIcon, MoonIcon, UserIcon, BriefcaseIcon } from '../../icons'
+import { SunIcon, MoonIcon, UserIcon, BriefcaseIcon, ContactIcon } from '../../icons'
 
 import style from './style.module.scss'
 
@@ -58,6 +58,12 @@ const routes = [
     path: '#/works',
     icon: BriefcaseIcon,
     key: 'portfolio'
+  },
+  {
+    name: 'Contáctame',
+    path: '#/contact',
+    icon: ContactIcon,
+    key: 'contact'
   }
 ]
 

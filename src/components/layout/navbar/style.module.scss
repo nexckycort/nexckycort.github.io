@@ -32,6 +32,14 @@
 
   @media (max-width: $breakpointPhone) {
     font-size: 1rem;
+    margin-right: 0.4rem;
+
+    svg {
+      width: 18px;
+      margin-right: -16px;
+      margin-bottom: 5px;
+      stroke: var(--text-color);
+    }
   }
 }
 
