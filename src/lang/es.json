@@ -1,7 +1,8 @@
 {
   "navbar": {
     "aboutMe": "Sobre mi",
-    "portfolio": "Portafolio"
+    "portfolio": "Portafolio",
+    "contact": "Contáctame"
   },
   "profile": {
     "title": "Hola, yo soy Nestor",
@@ -15,8 +16,10 @@
     "btnViewDemo": "ver demo"
   },
   "footer": {
-    "quote": "¿Quieres hablar conmigo?",
-    "contactMe": "contáctame"
+    "quote": "Estoy disponible en casi todas las redes sociales. Puede enviarme un mensaje, le responderé dentro de las 24 horas. Puedo ayudarte con Node.js, Deno, TypeScript, Python, React, Arquitectura de software, CI/CD, Cloud y desarrollo Open Source.",
+    "contactMe": "contáctame",
+    "btnContactMe": "enviar un correo electrónico",
+    "poweredBy": "Desarrollado por Nestor Cortina"
   },
   "backend-clean-architecture-nodejs": {
     "description": "Esta arquitectura es una investigación extensa, desde mi experiencia lidiando con un proyecto node.js mal estructurado, malos patrones e innumerables horas de refactorización de código y moviendo cosas de un lugar a otro."
