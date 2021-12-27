@@ -6,8 +6,8 @@
   },
   "profile": {
     "title": "Hello, I’m Nestor",
-    "rol": "Software Developer",
-    "description": "I'm a developer who loves Open Source with more than 2 years of experience in the design, development, analysis and implementation of monolithic and client-server applications. With knowledge of JavaScript, TypeScript, React, Node.js, relational and non-relational databases; SonarQube, Docker, CI / CD (GitLab) using agile methodologies.",
+    "rol": "Backend Developer",
+    "description": "I'm a developer who loves Open Source with more than 2 years of experience in the design, development, analysis and implementation of clean and scalable architectures, microservices, REST API, lambdas functions, monolithic applications and client-server applications. With knowledge in JavaScript, TypeScript, Python, Node.js, React, Firebase, relational and non-relational databases; SonarQube, Docker, CI / CD using agile methodologies.",
     "cv": "see resume"
   },
   "portfolio": {
@@ -16,7 +16,7 @@
     "btnViewDemo": "view demo"
   },
   "footer": {
-    "quote": "I am available on almost all social networks. You can message me, I will reply to you within 24 hours. I can help you with Node.js, Deno, TypeScript, Python, React, Software Architecture, CI / CD, Cloud, and Open Source Development.",
+    "quote": "I am available on almost all social networks. You can message me, I will reply to you within 24 hours. I can help you with Node.js, TypeScript, Python, React, Software Architecture, CI / CD, Cloud, and Open Source Development.",
     "contactMe": "contact me",
     "btnContactMe": "drop a email",
     "poweredBy": "Powered by Nestor Cortina"
