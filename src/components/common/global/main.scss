@@ -8,6 +8,7 @@
   --bg-color: white;
   --color-primary: #ff2d2d;
   --border-primary: #e8e7e7;
+  --modal-background: 0, 0, 0;
 }
 
 body {
@@ -32,6 +33,7 @@ body.dark {
   --text-color: white;
   --text-gray: #fff;
   --bg-color: black;
+  --modal-background: 120, 120, 120;
 }
 
 a {
