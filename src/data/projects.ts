@@ -7,6 +7,7 @@ interface Projects {
   tags: string[]
   sourceCode: string | null
   demoView: string | null
+  notShow?: true
 }
 
 const projects: Projects[] = [
@@ -101,7 +102,8 @@ const projects: Projects[] = [
     description: 'This is a project of a clean frontend architecture.',
     tags: ['react', 'typescript', 'patterns-design', 'solid'],
     sourceCode: 'https://github.com/nexckycort/frontend-clean-architecture-reactjs',
-    demoView: null
+    demoView: null,
+    notShow: true
   },
   {
     title: 'keycloak demo react',
@@ -111,7 +113,8 @@ const projects: Projects[] = [
     description: 'Demo for React and Keycloak SSO integration.',
     tags: ['react', 'typescript', 'keycloak'],
     sourceCode: 'https://github.com/nexckycort/keycloak-demo-react',
-    demoView: null
+    demoView: null,
+    notShow: true
   }
 ]
 

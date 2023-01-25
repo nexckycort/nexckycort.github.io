@@ -11,6 +11,7 @@ export const PortfolioPage = async () => {
     <div class="${style.container}">
       <div class="${style.gallery}">
         ${projects
+          .filter((project) => project.notShow === undefined)
           .map(({ slug, image, title }) => {
             return `
               <div class="${style.wrapperImage}">
