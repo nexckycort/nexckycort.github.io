@@ -3,7 +3,7 @@ import style from './style.module.scss'
 import { profile } from '../../lang/es.json'
 
 export const AboutMePage = async () => {
-  const me = await import('../../../public/me.jpg').then((module) => module.default)
+  const me = await import('../../../public/me.png').then((module) => module.default)
 
   const divElement = document.createElement('div')
   divElement.classList.add(style.aboutMeWrapper)
