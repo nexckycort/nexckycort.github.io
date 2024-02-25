@@ -1,5 +1,5 @@
-// const NodePolyfill = require('@rspack/plugin-node-polyfill');
 const rspack = require('@rspack/core');
+const minifyPlugin = require('@rspack/plugin-minify');
 const refreshPlugin = require('@rspack/plugin-react-refresh');
 const CleanTerminalPlugin = require('clean-terminal-webpack-plugin');
 const path = require('path');
@@ -17,9 +17,6 @@ module.exports = {
   entry: {
     main: './src/main.ts'
   },
-  output: {
-    publicPath: `http://${HOST}:${PORT}/`
-  },
   devtool: 'source-map',
   devServer: {
     open: isDev && true,
@@ -28,6 +25,17 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
     tsConfigPath: path.resolve(__dirname, 'tsconfig.json')
+  },
+  optimization: {
+    minimize: !isDev,
+    splitChunks: {
+      chunks: 'all'
+    },
+    minimizer: [
+      new minifyPlugin({
+        minifier: 'terser'
+      })
+    ]
   },
   module: {
     rules: [
