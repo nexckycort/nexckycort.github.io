@@ -1,6 +1,0 @@
-self["webpackHotUpdatenexckycort_github_io"]('src_lang_en_json', {
-"./src/lang/en.json": (function (module) {
-"use strict";
-module.exports = JSON.parse('{"navbar":{"aboutMe":"About me","portfolio":"Portfolio","contact":"Contact me"},"profile":{"title":"Hello, I’m Nestor","rol":"Software Engineer","description":"I\'m a developer who loves Open Source with 4 years of experience in the world of software development with knowledge in design, development, analysis and implementation of clean and scalable architectures, microservices, REST API, lambdas functions, monolithic applications and client-server applications. With knowledge in JavaScript, TypeScript, Node.js, React, Firebase, relational and non-relational databases; SonarQube, Docker, CI / CD using agile methodologies.","cv":"see resume"},"footer":{"quote":"I am available on almost all social networks. You can message me, I will reply to you within 24 hours. I can help you with Node.js, TypeScript, React, Software Architecture, CI / CD, Cloud, and Open Source Development.","contactMe":"contact me","btnContactMe":"drop a email","poweredBy":"Powered by Nestor Cortina"}}')}),
-
-});
