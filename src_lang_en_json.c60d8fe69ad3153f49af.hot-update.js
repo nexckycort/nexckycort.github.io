@@ -1,0 +1,6 @@
+self["webpackHotUpdatenexckycort_github_io"]('src_lang_en_json', {
+"./src/lang/en.json": (function (module) {
+"use strict";
+module.exports = JSON.parse('{"navbar":{"aboutMe":"About me","portfolio":"Portfolio","contact":"Contact me"},"profile":{"title":"Hello, I’m Nestor","rol":"Software Engineer","description":"I\'m a software developer specialized in creating efficient architectures and automating development processes. I have led projects from scratch, built internal libraries and have experience in technologies such as TypeScript, Node.js and React. I am passionate about solving technological challenges and helping companies achieve their goals effectively.","cv":"see resume"},"footer":{"quote":"I am available on almost all social networks. You can message me, I will reply to you within 24 hours. I can help you with Node.js, TypeScript, React, Software Architecture, CI / CD, Cloud, and Open Source Development.","contactMe":"contact me","btnContactMe":"drop a email","poweredBy":"Powered by Nestor Cortina"}}')}),
+
+});
