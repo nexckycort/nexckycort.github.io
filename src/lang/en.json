@@ -6,43 +6,13 @@
   },
   "profile": {
     "title": "Hello, I’m Nestor",
-    "rol": "Backend Developer",
-    "description": "I'm a developer who loves Open Source with 4 years of experience in the world of software development with knowledge in design, development, analysis and implementation of clean and scalable architectures, microservices, REST API, lambdas functions, monolithic applications and client-server applications. With knowledge in JavaScript, TypeScript, Node.js, React, Firebase, relational and non-relational databases; SonarQube, Docker, CI / CD using agile methodologies.",
-    "cv": "see resume"
-  },
-  "portfolio": {
-    "title": "My Projects",
-    "btnSourceCode": "view code source",
-    "btnViewDemo": "view demo"
+    "rol": "Software Engineer",
+    "description": "A Software Engineer specialized in creating efficient architectures and automating development processes. I have led projects from scratch, built multiple internal libraries to optimize workflow. My skills span technologies such as TypeScript, Node.js, Go, Python and React. I am motivated by solving technological challenges and helping companies achieve their objectives effectively."
   },
   "footer": {
     "quote": "I am available on almost all social networks. You can message me, I will reply to you within 24 hours. I can help you with Node.js, TypeScript, React, Software Architecture, CI / CD, Cloud, and Open Source Development.",
     "contactMe": "contact me",
     "btnContactMe": "drop a email",
     "poweredBy": "Powered by Nestor Cortina"
-  },
-  "backend-clean-architecture-nodejs": {
-    "description": "This architecture is an extensive investigation, from my experience dealing with a poorly structured node.js project, bad patterns, and countless hours of code refactoring and moving things from one place to another."
-  },
-  "monolito-react-nodejs": {
-    "description": "Implementation of web application with client server architecture with the functionality of merge both projects when compiling in order to deploy a monolithic app."
-  },
-  "keycloak-demo-react": {
-    "description": "Demo for React and Keycloak SSO integration."
-  },
-  "rijndael-nodejs": {
-    "description": "Implementation of the rijndael encryption algorithm."
-  },
-  "frontend-clean-architecture-reactjs": {
-    "description": "This is a clean frontend architecture project."
-  },
-  "cra-template": {
-    "description": "This is the base template that i usually use when i work with React."
-  },
-  "my-portfolio": {
-    "description": "This project is my personal website where I highlight my projects. It is built with the HTML, TypeScript, Sass technologies and packaged with Webpack."
-  },
-  "registration-and-login-template-nodejs": {
-    "description": "In this project, I create a login. In addition, we also create a user CRUD with NODEJS and PostgreSQL, with sending mail to activate the account."
   }
 }
