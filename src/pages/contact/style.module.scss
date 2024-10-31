@@ -1,4 +1,4 @@
-@import "../../components/common/global/variables";
+@use "../../components/common/global/variables" as variables;
 
 .footer {
   display: flex;
@@ -85,7 +85,7 @@
   }
 }
 
-@media (min-width: $breakpointLarge) {
+@media (min-width: variables.$breakpointLarge) {
   .wrapperImage,
   .body {
     max-width: 50%;

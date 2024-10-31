@@ -5,12 +5,7 @@ pre-commit:
     1_tschecking:
       files: git diff --cached  --name-only
       run: "pnpm check:types"
-    2_lint:
+    2_check:
       glob: "src/*.{js,ts}"
-      run: "pnpm lint {staged_files}"
+      run: "pnpm check {staged_files}"
       stage_fixed: true
-    3_format:
-      glob: "src/*.{js,ts}"
-      run: "pnpm format {staged_files}"
-      stage_fixed: true
-
