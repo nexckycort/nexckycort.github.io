@@ -19,10 +19,10 @@ export const ProjectPage = async (slug: string) => {
     </div>
     <div class="${style.projectWrapper}">
       <div class="${style.projectImgWrapper}">
-        <img src="${project.image}" class="${style.image}" alt="me" />
-        <h2 class="${style.title}">${project.title}</h2>
+        <img src="${project.image}" class="${style.image}" />
       </div>
       <div class="${style.projectDescriptionWrapper}">
+        <h2 class="${style.title}">${project.title}</h2>
         <p class="${style.description}" data-section="${project.slug}" data-value="description">${project.description}</p>
         ${
           project.sourceCode === null
