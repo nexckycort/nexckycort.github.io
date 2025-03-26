@@ -1,6 +1,13 @@
 import { LANGUAGE, selectedLanguage } from '../../../helpers/selectedLang'
 import { THEME, selectedTheme } from '../../../helpers/selectedTheme'
-import { ContactIcon, MoonIcon, SunIcon, UserIcon } from '../../icons'
+
+import {
+  BriefcaseIcon,
+  ContactIcon,
+  MoonIcon,
+  SunIcon,
+  UserIcon
+} from '../../icons'
 
 import style from './style.module.scss'
 
@@ -57,6 +64,12 @@ const routes = [
     key: 'aboutMe'
   },
   {
+    name: 'Portafolio',
+    path: '#/works',
+    icon: BriefcaseIcon,
+    key: 'portfolio'
+  },
+  {
     name: 'Contáctame',
     path: '#/contact',
     icon: ContactIcon,
@@ -87,9 +100,7 @@ const Navbar = () => {
         <li class="${style.navItem}">
           ${routes
             .map(({ path, icon, key, name }) => {
-              return /* html */ `<a class="${style.navLink} ${isActive(
-                path
-              )} lined-link" href="${path}">
+              return /* html */ `<a class="${style.navLink} ${isActive(path)} lined-link" href="${path}">
                 ${icon}<span data-section="navbar" data-value="${key}">${name}</span>
               </a>`
             })

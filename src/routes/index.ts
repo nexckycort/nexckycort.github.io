@@ -1,14 +1,16 @@
 import { Footer, Navbar } from '../components/layout'
 
+import { selectedLanguage } from '../helpers/selectedLang'
 import { AboutMePage } from '../pages/aboutme'
 import { ContactPage } from '../pages/contact'
-
-import { selectedLanguage } from '../helpers/selectedLang'
+import { PortfolioPage } from '../pages/portfolio'
+import { ProjectPage } from '../pages/project'
 
 export const routes: {
   [key: string]: () => Promise<HTMLDivElement>
 } = {
   '': AboutMePage,
+  '#/works': PortfolioPage,
   '#/contact': ContactPage
 }
 
@@ -27,6 +29,9 @@ export const router = async () => {
   content.innerHTML = ''
   if (routes[hash] !== undefined) {
     content.append(await routes[hash]())
+  } else {
+    const [, , project] = hash.split('/')
+    content.append(await ProjectPage(project))
   }
 
   const { changeLanguage } = selectedLanguage()

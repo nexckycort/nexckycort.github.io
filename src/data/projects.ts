@@ -18,11 +18,11 @@ const projects: Projects[] = [
       'https://user-images.githubusercontent.com/50475272/142638193-83ea016a-e6e3-407c-bbab-916101949a7a.png',
     category: 'Web development',
     description:
-      'This project is my personal website where I highlight my projects. It is built with the HTML, TypeScript, Sass technologies and packaged with Webpack.',
+      'This project is my personal website where I highlight my projects. It is built with the HTML, TypeScript, Sass technologies and packaged with Rspack.',
     tags: [
       'nodejs',
       'typescript',
-      'webpack',
+      'rspack',
       'scss',
       'git hook',
       'git flow',
