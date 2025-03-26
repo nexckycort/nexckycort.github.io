@@ -1,5 +1,6 @@
 import { LANGUAGE, selectedLanguage } from '../../../helpers/selectedLang'
 import { THEME, selectedTheme } from '../../../helpers/selectedTheme'
+import { toPage } from '../../../helpers/toPage'
 
 import {
   BriefcaseIcon,
@@ -16,13 +17,17 @@ const selectNavLink = (navElement: HTMLElement) => {
     '.lined-link'
   ) as unknown as Element[]
   for (const navLink of navLinks) {
-    navLink.addEventListener('click', () => {
+    navLink.addEventListener('click', (event) => {
       if (!navLink.classList.contains('active')) {
         navElement
           .querySelector('.lined-link.active')
           ?.classList.remove('active')
         navLink.classList.add('active')
       }
+
+      event.preventDefault()
+      const path = navLink.getAttribute('data-path') || ''
+      toPage(path)(event)
     })
   }
 }
@@ -59,26 +64,26 @@ const selectLanguage = (navElement: HTMLElement) => {
 const routes = [
   {
     name: 'Sobre mi',
-    path: '#',
+    path: '/',
     icon: UserIcon,
     key: 'aboutMe'
   },
   {
     name: 'Portafolio',
-    path: '#/works',
+    path: '/works',
     icon: BriefcaseIcon,
     key: 'portfolio'
   },
   {
     name: 'Contáctame',
-    path: '#/contact',
+    path: '/contact',
     icon: ContactIcon,
     key: 'contact'
   }
-]
+] as const
 
 const Navbar = () => {
-  const currentPath = location.hash === '' ? '#' : location.hash
+  const currentPath = location.pathname === '' ? '' : location.pathname
 
   const toggleThemeIcon = () => {
     const { theme } = selectedTheme()
@@ -100,7 +105,7 @@ const Navbar = () => {
         <li class="${style.navItem}">
           ${routes
             .map(({ path, icon, key, name }) => {
-              return /* html */ `<a class="${style.navLink} ${isActive(path)} lined-link" href="${path}">
+              return /* html */ `<a class="${style.navLink} ${isActive(path)} lined-link" href="#" data-path="${path}">
                 ${icon}<span data-section="navbar" data-value="${key}">${name}</span>
               </a>`
             })

@@ -1,4 +1,5 @@
 import projects from '../../data/projects'
+import { toPage } from '../../helpers/toPage'
 
 import style from './style.module.scss'
 
@@ -15,7 +16,7 @@ export const PortfolioPage = async () => {
           .map(({ slug, image, title }) => {
             return `
               <div class="${style.wrapperImage}">
-                <a href="#/works/${slug}">
+                <a class="project" href="#" data-path="/works/${slug}">
                   <span class="${style.workTitle}">${title}</span>
                 </a>
                 <img class="${style.workImage}" src="${image}" alt="${title}" />
@@ -25,6 +26,16 @@ export const PortfolioPage = async () => {
       </div>
     <div>
     `
+
+  divElement.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement
+    const link = target.closest('.project') as HTMLAnchorElement | null
+    if (link) {
+      event.preventDefault()
+      const path = link.getAttribute('data-path') || ''
+      toPage(path)(event)
+    }
+  })
 
   return divElement
 }

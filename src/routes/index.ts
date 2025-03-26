@@ -9,9 +9,9 @@ import { ProjectPage } from '../pages/project'
 export const routes: {
   [key: string]: () => Promise<HTMLDivElement>
 } = {
-  '': AboutMePage,
-  '#/works': PortfolioPage,
-  '#/contact': ContactPage
+  '/': AboutMePage,
+  '/works': PortfolioPage,
+  '/contact': ContactPage
 }
 
 export const router = async () => {
@@ -24,13 +24,13 @@ export const router = async () => {
     footer.append(Footer())
   }
 
-  const hash = location.hash.toLowerCase()
+  const pathname = location.pathname.toLowerCase()
 
   content.innerHTML = ''
-  if (routes[hash] !== undefined) {
-    content.append(await routes[hash]())
+  if (routes[pathname] !== undefined) {
+    content.append(await routes[pathname]())
   } else {
-    const [, , project] = hash.split('/')
+    const [, , project] = pathname.split('/')
     content.append(await ProjectPage(project))
   }
 

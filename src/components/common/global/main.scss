@@ -3,19 +3,22 @@
 
 @font-face {
   font-family: GT-Walsheim-Pro-Regular;
-  src: url("../../../assets/fonts/GT-Walsheim-Pro-Regular.woff2") format("woff2"); /* Super Modern Browsers */
+  src: url("../../../assets/fonts/GT-Walsheim-Pro-Regular.woff2") format("woff2");
+  /* Super Modern Browsers */
   font-display: swap;
 }
 
 @font-face {
   font-family: GT-Walsheim-Pro-Medium;
-  src: url("../../../assets/fonts/GT-Walsheim-Pro-Medium.woff2") format("woff2"); /* Super Modern Browsers */
+  src: url("../../../assets/fonts/GT-Walsheim-Pro-Medium.woff2") format("woff2");
+  /* Super Modern Browsers */
   font-display: swap;
 }
 
 @font-face {
   font-family: GT-Walsheim-Pro-Bold;
-  src: url("../../../assets/fonts/GT-Walsheim-Pro-Bold.woff2") format("woff2"); /* Super Modern Browsers */
+  src: url("../../../assets/fonts/GT-Walsheim-Pro-Bold.woff2") format("woff2");
+  /* Super Modern Browsers */
   font-display: swap;
 }
 
@@ -64,10 +67,10 @@ a {
 }
 
 .lined-link {
-  display: inline-block;
+  display: inline-block !important;
   position: relative;
-  padding-top: 0.5em;
-  padding-bottom: 0.25em;
+  padding-top: 0.5em !important;
+  padding-bottom: 0.25em !important;
   transition: all 0.2s ease-out;
   will-change: transform, color;
 
