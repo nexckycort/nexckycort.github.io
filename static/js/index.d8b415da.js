@@ -67,10 +67,10 @@
     </div>
     <div class="${M.projectWrapper}">
       <div class="${M.projectImgWrapper}">
-        <img src="${o.image}" class="${M.image}" alt="me" />
-        <h2 class="${M.title}">${o.title}</h2>
+        <img src="${o.image}" class="${M.image}" />
       </div>
       <div class="${M.projectDescriptionWrapper}">
+        <h2 class="${M.title}">${o.title}</h2>
         <p class="${M.description}" data-section="${o.slug}" data-value="description">${o.description}</p>
         ${null===o.sourceCode?"":`<a class="${M.btn}" href="${o.sourceCode}" target="_blank" rel="noopener" data-section="portfolio" data-value="btnSourceCode">${e.portfolio.btnSourceCode}</a>`}
         ${null===o.demoView?"":`<a class="${M.btn}" href="${o.demoView}" target="_blank" rel="noopener" data-section="portfolio" data-value="btnViewDemo">${e.portfolio.btnViewDemo}</a>`}
