@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  margin-top: 2rem;
 }
 
 .projectImgWrapper {
@@ -80,10 +79,6 @@
     text-align: left;
   }
 
-  .projectWrapper {
-    margin-top: 6rem;
-  }
-
   .description,
   .projectImgWrapper,
   .title {
@@ -107,5 +102,28 @@
   .btn {
     width: 44%;
     margin: 2rem 0 2rem 1rem;
+  }
+}
+
+.backButtonWrapper {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.backButton {
+  background-color: transparent;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #525354;
   }
 }

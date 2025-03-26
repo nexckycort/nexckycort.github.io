@@ -12,7 +12,8 @@
   "portfolio": {
     "title": "My Projects",
     "btnSourceCode": "view code source",
-    "btnViewDemo": "view demo"
+    "btnViewDemo": "view demo",
+    "btnBack": "← Back"
   },
   "footer": {
     "quote": "I am available on almost all social networks. You can message me, I will reply to you within 24 hours. I can help you with Node.js, TypeScript, React, Software Architecture, CI / CD, Cloud, and Open Source Development.",

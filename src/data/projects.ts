@@ -12,10 +12,31 @@ interface Projects {
 
 const projects: Projects[] = [
   {
+    title: 'lambda devkit',
+    slug: 'lambda-devkit',
+    image: 'https://i.ibb.co/9kTnFMCr/image.png',
+    category: 'Development Tools',
+    description:
+      'A development toolkit for compiling and running AWS Lambda functions locally with API Gateway simulation.',
+    tags: [
+      'AWS Lambda',
+      'API Gateway',
+      'Local Development',
+      'Development Tools',
+      'Node.js',
+      'JavaScript',
+      'Serverless',
+      'Toolkit',
+      'DevOps',
+      'Open Source'
+    ],
+    sourceCode: 'https://github.com/nexckycort/lambda-devkit',
+    demoView: 'https://www.npmjs.com/package/@nexckycort/lambda-devkit'
+  },
+  {
     title: 'my portfolio',
     slug: 'my-portfolio',
-    image:
-      'https://user-images.githubusercontent.com/50475272/142638193-83ea016a-e6e3-407c-bbab-916101949a7a.png',
+    image: 'https://i.ibb.co/zVtwWyyT/image.png',
     category: 'Web development',
     description:
       'This project is my personal website where I highlight my projects. It is built with the HTML, TypeScript, Sass technologies and packaged with Rspack.',
